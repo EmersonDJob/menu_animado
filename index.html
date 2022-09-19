@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Menu Animado</title>
 </head>
 <body>
-    <h1>Menu animado</h1>
+    <div class="navigation">
+        <div class="toggle"><span></span></div>
+        <ul>
+            <li style="--i:0"><a href="*"></a>Home</li>
+            <li style="--i:1"><a href="*"></a>About</li>
+            <li style="--i:2"><a href="*"></a>Service</li>
+            <li style="--i:3"><a href="*"></a>Work</li>
+            <li style="--i:4"><a href="*"></a>Team</li>
+            <li style="--i:5"><a href="*"></a>Contact</li>
+        </ul>
+
+    </div>
+
+
+    <script>
+        let navigation = document.querySelector(".navigation");
+        document.querySelector(".toggle").onclick = function () {
+            this.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
     
 </body>
 </html>
